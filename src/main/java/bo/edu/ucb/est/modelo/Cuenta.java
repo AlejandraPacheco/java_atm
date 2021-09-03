@@ -10,11 +10,13 @@ package bo.edu.ucb.est.modelo;
  * @author ecampohermoso
  */
 public class Cuenta {
+    private int numCuenta;
     private String moneda;
     private String tipo;
     private double saldo;
 
-    public Cuenta(String moneda, String tipo, double saldoInicial) {
+    public Cuenta(int numCuenta, String moneda, String tipo, double saldoInicial) {
+        this.numCuenta = numCuenta;
         this.moneda = moneda;
         this.tipo = tipo;
         this.saldo = saldoInicial;
@@ -37,7 +39,15 @@ public class Cuenta {
         }
         return resultado;
     }
-            
+    
+    public int getNumCuenta() {
+        return numCuenta;
+    }
+
+    public void setNumCuenta(int numCuenta) {
+        this.numCuenta = numCuenta;
+    }
+    
     public String getMoneda() {
         return moneda;
     }
